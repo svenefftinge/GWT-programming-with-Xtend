@@ -61,7 +61,7 @@ class HelloGWT implements EntryPoint {
 			
 			box.widget = new VerticalPanel().with [
 				addStyleName("dialogVPanel")
-				it += new HTML('''<b>Sending name to Ç'the'È server:</b>'''.toString)
+				it += new HTML("<b>Sending name to the server:</b>")
 				it += textToServerLabel
 				it += new HTML("<br><b>Server replies:</b>")
 				it += serverResponseLabel

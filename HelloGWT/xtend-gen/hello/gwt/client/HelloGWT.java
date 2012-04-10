@@ -21,7 +21,6 @@ import hello.gwt.shared.FieldVerifier;
 import hello.gwt.util.ClientUi;
 import hello.gwt.util.ConfigurableAsyncCallback;
 import hello.gwt.util.DocumentUtil;
-import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.BooleanExtensions;
 import org.eclipse.xtext.xbase.lib.Functions.Function0;
 import org.eclipse.xtext.xbase.lib.IntegerExtensions;
@@ -94,12 +93,7 @@ public class HelloGWT implements EntryPoint {
           final Procedure1<VerticalPanel> _function = new Procedure1<VerticalPanel>() {
               public void apply(final VerticalPanel it) {
                 it.addStyleName("dialogVPanel");
-                StringConcatenation _builder = new StringConcatenation();
-                _builder.append("<b>Sending name to ");
-                _builder.append("the", "");
-                _builder.append(" server:</b>");
-                String _string = _builder.toString();
-                HTML _hTML = new HTML(_string);
+                HTML _hTML = new HTML("<b>Sending name to the server:</b>");
                 ClientUi.operator_add(it, _hTML);
                 ClientUi.operator_add(it, textToServerLabel);
                 HTML _hTML_1 = new HTML("<br><b>Server replies:</b>");
